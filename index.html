@@ -65,6 +65,53 @@
       </div>
   </div>
 </section>
-<script src="./script.js"></script>
+<script>
+    function SB() {
+            const User = document.getElementById("InputUser").value;
+            const Pass = document.getElementById("InputPassword").value;
+
+            if (User === "Admin" && Pass === "admin") {
+                document.getElementById("toast-success").style.display = "flex"
+                document.getElementById("toast-danger").style.display = "none"
+                setTimeout(function redirect() {
+                    window.location = "/account.html";
+                }, 3000);
+            }
+            else {
+                if (User === "Reza" && Pass === "potolkumer") {
+                    document.getElementById("toast-success").style.display = "flex"
+                    document.getElementById("toast-danger").style.display = "none"
+                    setTimeout(function redirect() {
+                        window.location = "/account.html";
+                    }, 3000);
+                }
+                else {
+                    if (User === "WebDev" && Pass === "webdev") {
+                        document.getElementById("toast-success").style.display = "flex"
+                        document.getElementById("toast-danger").style.display = "none"
+                        setTimeout(function redirect() {
+                            window.location = "/account.html";
+                        }, 3000);
+                    }
+                    else {
+                        document.getElementById("toast-danger").style.display = "flex"
+                        document.getElementById("toast-success").style.display = "none"
+                        setTimeout(function () {
+                            location.reload();
+                        }, 3000);
+                    }
+                }
+            }
+        }
+
+        function myFunction() {
+            const ShowPass = document.getElementById("InputPassword");
+            if (ShowPass.type === "password") {
+                ShowPass.type = "text";
+            } else {
+                ShowPass.type = "password";
+            }
+        }
+</script>
 </body>
 </html>
